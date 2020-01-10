@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "0eba4204-f81c-47bd-9bb8-12846b635852",
+		"name": "Bidding API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User & Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/login.php?email=bamboo@gmail.com&password=bamboo12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"login.php"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "bamboo@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "bamboo12345678"
+								}
+							]
+						},
+						"description": "Allows users to authenticate and login to the system. "
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/register?full_name=Bamboo&email=bamboo@gmail.com&password=bamboo123456789&confirm_password=bamboo123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"register"
+							],
+							"query": [
+								{
+									"key": "full_name",
+									"value": "Bamboo"
+								},
+								{
+									"key": "email",
+									"value": "bamboo@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "bamboo123456789"
+								},
+								{
+									"key": "confirm_password",
+									"value": "bamboo123456789"
+								}
+							]
+						},
+						"description": "Allows users to register to the system. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Bidding",
+			"item": [
+				{
+					"name": "Post Bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/post_bid.php?bid_title=Buy My Home&bid_description=I want to sell my home you can engage by biding&price=200000&bid_picture_url=https://imagecdn.beforward.jp/large/201911/1550502/BG599364_5b2f7b.JPG &expiration_date_time=2019-11-01 21:39:19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"post_bid.php"
+							],
+							"query": [
+								{
+									"key": "bid_title",
+									"value": "Buy My Home"
+								},
+								{
+									"key": "bid_description",
+									"value": "I want to sell my home you can engage by biding"
+								},
+								{
+									"key": "price",
+									"value": "200000"
+								},
+								{
+									"key": "bid_picture_url",
+									"value": "https://imagecdn.beforward.jp/large/201911/1550502/BG599364_5b2f7b.JPG "
+								},
+								{
+									"key": "expiration_date_time",
+									"value": "2019-11-01 21:39:19"
+								}
+							]
+						},
+						"description": "Allows users to post bids regarding a service that they would like to acquire."
+					},
+					"response": []
+				},
+				{
+					"name": "View Bid (For Single Bid)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"huhuhu Halefom Messele\",\r\n  \"age\": \"29\",\r\n  \"sex\": \"Male\",\r\n  \"phone\": \"+251923937882\",\r\n  \"address\": \"Addis Ababa, Lafto\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/bidding/view_bids.php?bid_id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"view_bids.php"
+							],
+							"query": [
+								{
+									"key": "bid_id",
+									"value": "5"
+								}
+							]
+						},
+						"description": "Show the specific bid with its bidding info and proposals"
+					},
+					"response": []
+				},
+				{
+					"name": "View Bid (To List All Bids)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/view_bids?limit=14&offset=0&bid_sta tus=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"view_bids"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "14"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "bid_sta tus",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Allows users to see all list of bids. "
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/edit_bid?bid_id=9&bid_title=My fancy car For sale &bid_description=I want to sell my car you can engage by biding&price=200000&bid_picture_url=qwertyu&expiration_date_ti me=2019-11-01 21:39:19 ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"edit_bid"
+							],
+							"query": [
+								{
+									"key": "bid_id",
+									"value": "9"
+								},
+								{
+									"key": "bid_title",
+									"value": "My fancy car For sale "
+								},
+								{
+									"key": "bid_description",
+									"value": "I want to sell my car you can engage by biding"
+								},
+								{
+									"key": "price",
+									"value": "200000"
+								},
+								{
+									"key": "bid_picture_url",
+									"value": "qwertyu"
+								},
+								{
+									"key": "expiration_date_ti me",
+									"value": "2019-11-01 21:39:19 "
+								}
+							]
+						},
+						"description": "Allows users to edit bids that they posted. "
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/delete_bid.php?bid_id=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"delete_bid.php"
+							],
+							"query": [
+								{
+									"key": "bid_id",
+									"value": "8"
+								}
+							]
+						},
+						"description": "Allows users to delete bids that they posted. \r\nAccess "
+					},
+					"response": []
+				},
+				{
+					"name": "Bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/bid?bid_id=10&proposed_price=8000&b idding_description=I offered this price but I can do that with unbelievable quality!",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"bid"
+							],
+							"query": [
+								{
+									"key": "bid_id",
+									"value": "10"
+								},
+								{
+									"key": "proposed_price",
+									"value": "8000"
+								},
+								{
+									"key": "b idding_description",
+									"value": "I offered this price but I can do that with unbelievable quality!"
+								}
+							]
+						},
+						"description": "Allows users to submit proposals to a specific bid."
+					},
+					"response": []
+				},
+				{
+					"name": "List My Bids",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/list_my_bids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"list_my_bids"
+							]
+						},
+						"description": "Allows users to see bids that they posted and bids that they participated (submitted proposal to). "
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Bidding Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/edit_bidding?bidding_id=7&proposed_ price=899&bidding_description=abuguyuuiiiiida ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"edit_bidding"
+							],
+							"query": [
+								{
+									"key": "bidding_id",
+									"value": "7"
+								},
+								{
+									"key": "proposed_ price",
+									"value": "899"
+								},
+								{
+									"key": "bidding_description",
+									"value": "abuguyuuiiiiida "
+								}
+							]
+						},
+						"description": "Allows users to edit their proposal that they submitted for a bid. "
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bidding Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/delete_bidding_info?bidding_id=16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"delete_bidding_info"
+							],
+							"query": [
+								{
+									"key": "bidding_id",
+									"value": "16"
+								}
+							]
+						},
+						"description": "Allows users to delete proposal/s that they submitted for a bid."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bidding Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/get_bidding_info?bidding_id=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"get_bidding_info"
+							],
+							"query": [
+								{
+									"key": "bidding_id",
+									"value": "8"
+								}
+							]
+						},
+						"description": "Allows users to get the details of a proposal."
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/approve_bid?bidding_id=11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"approve_bid"
+							],
+							"query": [
+								{
+									"key": "bidding_id",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Allows users to approve proposal for bids that they posted."
+					},
+					"response": []
+				},
+				{
+					"name": "Rate User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/bidding/rate_bid?bidding_id=11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"bidding",
+								"rate_bid"
+							],
+							"query": [
+								{
+									"key": "bidding_id",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Allows users to rate users (service providers) after the completion of a specific task."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

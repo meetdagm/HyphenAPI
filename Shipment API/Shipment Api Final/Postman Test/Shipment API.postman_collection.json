@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "6507f350-1540-4d0d-a35e-e62540306744",
+		"name": "Shipment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delivery Man Function",
+			"item": [
+				{
+					"name": "List Progressed Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/list_shipment_delivery_man.php?shipment_type=progress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"list_shipment_delivery_man.php"
+							],
+							"query": [
+								{
+									"key": "shipment_type",
+									"value": "progress"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Shipment (Error Example)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/accept_shipment.php?shipment_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"accept_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/start_shipment.php?shipment_id=1&starting_location=45.46513515,8.1655165",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"start_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "1"
+								},
+								{
+									"key": "starting_location",
+									"value": "45.46513515,8.1655165"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Receive Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/receive_package.php?shipment_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"receive_package.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finish Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/finish_shipment.php?shipment_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"finish_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/cancel_shipment.php?shipment_id=1&reason=Engine crashed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"cancel_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "1"
+								},
+								{
+									"key": "reason",
+									"value": "Engine crashed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register (Error Email Example)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/register.php?full_name=Kebede Aschalew&email=kebe@&password=123456789&confirm_password=123456789&profile_pic_url=aman.jpg&user_type=DELIVERY_MAN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"register.php"
+							],
+							"query": [
+								{
+									"key": "full_name",
+									"value": "Kebede Aschalew"
+								},
+								{
+									"key": "email",
+									"value": "kebe@"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123456789"
+								},
+								{
+									"key": "profile_pic_url",
+									"value": "aman.jpg"
+								},
+								{
+									"key": "user_type",
+									"value": "DELIVERY_MAN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Get Shipment Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/get_shipment_status_delivery_man.php?shipment_id=20&shipment_status=started",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"get_shipment_status_delivery_man.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "20"
+								},
+								{
+									"key": "shipment_status",
+									"value": "started"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/update_location.php?shipment_id=6&current_location=45.7895,8.5465454",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"update_location.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "6"
+								},
+								{
+									"key": "current_location",
+									"value": "45.7895,8.5465454"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Progressed Shipment with limit and offset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/list_shipment_delivery_man.php?shipment_type=progress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"list_shipment_delivery_man.php"
+							],
+							"query": [
+								{
+									"key": "shipment_type",
+									"value": "progress"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin Function",
+			"item": [
+				{
+					"name": "Post Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/post_shipment.php?starting_loc=4.5485,8.54135&destination_loc=8.4151351,9.646464&starting_time=4:35 PM&end_time=8:44 AM&receiver_address=Aschalew Gizachew, 0912554758, Addis Ababa&note=sajsaljljsalhlasdldsad aljsbd&mode=Package only",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"post_shipment.php"
+							],
+							"query": [
+								{
+									"key": "starting_loc",
+									"value": "4.5485,8.54135"
+								},
+								{
+									"key": "destination_loc",
+									"value": "8.4151351,9.646464"
+								},
+								{
+									"key": "starting_time",
+									"value": "4:35 PM"
+								},
+								{
+									"key": "end_time",
+									"value": "8:44 AM"
+								},
+								{
+									"key": "receiver_address",
+									"value": "Aschalew Gizachew, 0912554758, Addis Ababa"
+								},
+								{
+									"key": "note",
+									"value": "sajsaljljsalhlasdldsad aljsbd"
+								},
+								{
+									"key": "mode",
+									"value": "Package only"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/list_shipment.php?shipment_status=All&limit=2&offset=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"list_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_status",
+									"value": "All"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offset",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Edit Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/edit_shipment.php?shipment_id=9&starting_loc=45.225,46.4564&destination_loc=45.225,46.4564&starting_time=8:55 AM&end_time=2:20 PM&receiver_address=Kebede Gizachew, 0912554758, Addis Ababa&note=afdjsadjfaj akjdfkJDfkda FDA &mode=Package only",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"edit_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "9"
+								},
+								{
+									"key": "starting_loc",
+									"value": "45.225,46.4564"
+								},
+								{
+									"key": "destination_loc",
+									"value": "45.225,46.4564"
+								},
+								{
+									"key": "starting_time",
+									"value": "8:55 AM"
+								},
+								{
+									"key": "end_time",
+									"value": "2:20 PM"
+								},
+								{
+									"key": "receiver_address",
+									"value": "Kebede Gizachew, 0912554758, Addis Ababa"
+								},
+								{
+									"key": "note",
+									"value": "afdjsadjfaj akjdfkJDfkda FDA "
+								},
+								{
+									"key": "mode",
+									"value": "Package only"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/delete_shipment.php?shipment_id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"delete_shipment.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shipment Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/get_shipment_status.php?shipment_id=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"get_shipment_status.php"
+							],
+							"query": [
+								{
+									"key": "shipment_id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/register.php?full_name=Jilalu Aschalew&email=jil@gmail.com&password=123456789&confirm_password=123456789&profile_pic_url=aman.jpg&user_type=DELIVERY_MAN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"register.php"
+							],
+							"query": [
+								{
+									"key": "full_name",
+									"value": "Jilalu Aschalew"
+								},
+								{
+									"key": "email",
+									"value": "jil@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123456789"
+								},
+								{
+									"key": "profile_pic_url",
+									"value": "aman.jpg"
+								},
+								{
+									"key": "user_type",
+									"value": "DELIVERY_MAN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/Login.php?email=amanuuka@gmail.com&password=AM0929006518",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"Login.php"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "amanuuka@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "AM0929006518"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ShipmentApi/Logout.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ShipmentApi",
+								"Logout.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

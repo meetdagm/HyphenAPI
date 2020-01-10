@@ -1,0 +1,21 @@
+{
+  "name": "hi/bidding",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kaleab Yalewdeg",
+      "email": "kaleabyalewdeg46@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "ezyang/htmlpurifier": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "IDS\\Tests": "tests/",
+      "IDS": "lib/"
+    }
+  }
+}
